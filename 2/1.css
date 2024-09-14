@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    font-style: italic;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    background-color: #f0f4f8;
+}
+
+h1, h2, p {
+    
+    text-align: center;
+}
+#next-btn {
+    background: linear-gradient(135deg, #00aaff, #0066cc);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#next-btn:disabled {
+    background: linear-gradient(135deg, #99ccff, #6699cc);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#next-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #0077cc, #0055aa);
+    transform: translateY(-2px);
+}
+
+#next-btn:active:not(:disabled) {
+    background: linear-gradient(135deg, #005599, #003377);
+    transform: translateY(0);
+}
+
+
+/* Glass Effect for Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #020202;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Home Page */
+#home{
+    padding-top: 7.2%;
+}
+#about{
+    padding-top: 7.2%;
+}
+
+.container {
+    
+    padding: 40px;
+    text-align: center;
+}
+
+.start-btn, .back-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.start-btn:hover, .back-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Quiz Popup */
+
+#quiz-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#quiz-container:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Styling for the quiz header (question and timer) */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.quiz-header h2 {
+    font-size: 22px;
+    color: #333;
+    margin: 0;
+}
+
+#timer {
+    font-size: 18px;
+    color: #00aaff;
+    font-weight: bold;
+}
+
+/* Styling for the options list (answers) */
+#options-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#options-list li {
+    margin-bottom: 10px;
+}
+
+#options-list li button {
+    width: 100%;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 2px solid #00aaff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#options-list li button:hover {
+    background-color: #e0f7ff;
+    transform: translateY(-3px);
+}
+
+#options-list li button:active {
+    background-color: #b3e5fc;
+    transform: translateY(0);
+}
+
+/* Styling for feedback (correct/wrong answer) */
+#feedback {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    font-style:italic;
+    text-align: center;
+    padding: 20px;
+    background-color: #181818;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Hidden class to toggle visibility */
+.hidden {
+    display: none;
+}
+/* Disable the links when quiz is running */
+nav a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}

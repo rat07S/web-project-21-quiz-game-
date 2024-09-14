@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Game</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <!-- Header with quiz name and navigation links -->
+    <header class="glass-effect">
+        <div class="logo">
+            <h1>Quiz Game</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="goHome()">Home</a></li>
+                <li><a href="#about" onclick="openAbout()">About</a></li>
+                <li><a href="#quiz" onclick="startQuiz()">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to the Quiz Game!</h2>
+            <p>Test your knowledge across multiple subjects. Are you ready?</p>
+            <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+        </div>
+    </section>
+
+    <!-- About Page (hidden by default) -->
+    <section id="about" class="hidden">
+        <div class="container">
+            <h2>About the Game</h2>
+            <p>This is an interactive quiz game that challenges your knowledge with 10 random questions from various fields.</p>
+            <button class="back-btn" onclick="goHome()">Back to Home</button>
+        </div>
+    </section>
+
+    <!-- Quiz Container (hidden by default) -->
+    <div id="quiz-container" class="quiz-popup hidden">
+        <div class="quiz-header">
+            <h2 id="question">Question text</h2>
+            <span id="timer">Time Left: 30</span>
+        </div>
+        <ul id="options-list"></ul>
+        <div id="feedback"></div>
+        <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created by Rathish | Interactive Quiz Game 2024</p>
+    </footer>
+
+    <script src="1.js"></script>
+</body>
+</html>
